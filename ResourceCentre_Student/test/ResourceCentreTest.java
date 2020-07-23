@@ -95,7 +95,11 @@ public class ResourceCentreTest {
 	@Test
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
+
+		// write your code here
+
 		// write your code here	
+
 		// Test if Item list is not null but empty, so that can add a new item
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		
@@ -112,9 +116,12 @@ public class ResourceCentreTest {
 		//test if the expected output string same as the list of Chromebook retrieved from the SourceCentre
 		allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
 
-		testOutput = String.format("%-10s %-30s %-10s %-10s %-20d\n","CB0011", "My Google Chromebook 1st", "Mac OS");
-		testOutput += String.format("%-10s %-30s %-10s %-10s %-20d\n","CB0012", "SAMSUNG Chromebook 4+", "Win 10");
+		testOutput = String.format("%-10s %-30s %-10s %-10s %-20d\n","CB0011", "My Google Chromebook 1st", "Yes", "", "Mac OS");
+		testOutput += String.format("%-10s %-30s %-10s %-10s %-20d\n","CB0012", "SAMSUNG Chromebook 4+", "Yes", "", "Win 10");
 	
+
+		assertEquals("Check that ViewAllChromebookList", testOutput, allChromebook);
+
 		assertEquals("Check that ViewAllChromebookList", testOutput, allChromebook);
 	}
 	@Test
@@ -147,8 +154,10 @@ public class ResourceCentreTest {
 		ResourceCentre.addChromebook(chromebookList, cb1);
 		boolean op01 = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "21-7-2020");
 		assertEquals(true, op01);
-						
-				boolean op02 = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "29-7-2020");
+		
+		boolean op02 = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "29-7-2020");
+
+		op02 = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "29-7-2020");
 		assertEquals(false, op02);
 			
 	}
