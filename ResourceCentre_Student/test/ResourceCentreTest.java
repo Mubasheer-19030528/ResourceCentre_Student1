@@ -52,6 +52,8 @@ public class ResourceCentreTest {
 	public void addChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		addCamcorderTest();
+		addChromebookTest();
 	}
 	
 	@Test
@@ -82,12 +84,15 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		retrieveAllCamcorderTest();
+		retrieveAllChromebookTest();
 	}
 
 	@Test
 	public void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		doLoanCamcorderTest();
 		
 	}
 	
@@ -95,18 +100,20 @@ public class ResourceCentreTest {
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		doLoanChromebookTest();
 	}
 	
 	@Test
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		
+		doReturnCamcorderTest();
 	}
 	@Test
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		doReturnChromebookTest();
 	}
 	
 	@After
