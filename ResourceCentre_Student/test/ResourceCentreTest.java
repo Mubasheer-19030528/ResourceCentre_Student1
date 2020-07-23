@@ -52,6 +52,7 @@ public class ResourceCentreTest {
 	public void addChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
 		// Item list is not null, so that can add a new item
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		
@@ -69,7 +70,7 @@ public class ResourceCentreTest {
 	
 	@Test
 	public void retrieveAllCamcorderTest() {
-		// Test if Item list is not null but empty, so that can add a new item
+		// Test if Item list is not null but empty, so that can add a new item test 1
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
 		
 		//test if the list of camcorders retrieved from the SourceCentre is empty
@@ -128,6 +129,16 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
+		// Item list is not null, so that can loan an item
+		assertNotNull("Test if there is valid Camcorder arraylist to loan", camcorderList);
+			
+		//After the CC001 in camcorderList is loaned with a due date of 10, the due date changed
+		ResourceCentre.addCamcorder(camcorderList, cc1);
+		boolean op01 = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "21-7-2020");
+		assertEquals(true, op01);
+				
+		boolean op02 = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "29-7-2020");
+		assertEquals(false, op02);
 		
 	}
 	
@@ -136,6 +147,17 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
+		// Item list is not null, so that can loan an item
+		assertNotNull("Test if there is valid Chromebook arraylist to loan", chromebookList);
+					
+		//After the CC001 in camcorderList is loaned with a due date of 10, the due date changed
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		boolean op01 = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "21-7-2020");
+		assertEquals(true, op01);
+						
+		boolean op02 = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "29-7-2020");
+		assertEquals(false, op02);
+			
 	}
 	
 	@Test
